@@ -1,0 +1,16 @@
+development: &defaults
+  database: tagger_development
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  username: root
+  password:
+  host: localhost
+
+test:
+  <<: *defaults
+  database: tagger_test
+
+cucumber:
+  <<: *defaults
+  database: tagger_test
