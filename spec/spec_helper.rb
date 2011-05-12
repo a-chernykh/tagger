@@ -47,3 +47,5 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 end
+
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}

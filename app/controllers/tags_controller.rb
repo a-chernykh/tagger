@@ -3,10 +3,12 @@ class TagsController < ApplicationController
   before_filter :find_tag, :only => [:increment]
 
   def index
+    respond_with(@tags = Tag.order_by_rank('desc'))
   end
 
   def increment
     @tag.hit!
+    respond_with(@tag, :location => tags_url)
   end
 
   protected
