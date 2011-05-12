@@ -17,7 +17,7 @@ describe TagsController do
 
   it 'should allow to hit particular tag' do
     tag = Factory(:tag, :hits => 9)
-    post 'increment', :id => tag.id
+    put 'increment', :id => tag.id
     response.should redirect_to(tags_url)
   end
 end
