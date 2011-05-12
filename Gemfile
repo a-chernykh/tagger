@@ -17,6 +17,7 @@ group :test do
   gem 'database_cleaner', '0.6.7'
   gem 'cucumber-rails', '0.4.1'
   gem 'cucumber', '0.10.2'
+  gem 'pickle', '0.4.7'
   gem 'spork', '0.8.4'
   gem 'launchy', '0.4.0'
   gem 'factory_girl_rails', '1.0.1'

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe TagsController do
-  integrate_views
+  render_views
 
   it 'should return the list of tags in json descending by rank' do
     tag1, tag2, tag3 = build_3_tags
@@ -17,7 +17,7 @@ describe TagsController do
 
   it 'should allow to hit particular tag' do
     tag = Factory(:tag, :hits => 9)
-    put 'increment', :id => tag.id
+    post 'increment', :id => tag.id
     response.should redirect_to(tags_url)
   end
 end
